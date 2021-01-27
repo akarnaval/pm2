@@ -1,0 +1,956 @@
+@font-face
+{
+   font-family: "Montserrat";
+   src: url('../font/Montserrat-Regular.woff') format('woff'),
+        url('../font/Montserrat-Regular.ttf') format('truetype'),
+        url('../font/Montserrat-Regular.eot') format('embedded-opentype');
+}
+@font-face
+{
+   font-family: "";
+   src: url('../font/Montserrat-Bold.woff') format('woff'),
+        url('../font/Montserrat-Bold.ttf') format('truetype'),
+        url('../font/Montserrat-Bold.eot') format('embedded-opentype');
+}
+@-webkit-keyframes animate-fade-in-down
+{
+   0% { opacity: 0; -webkit-transform: translate(0px,-100px) rotate(0deg) ;  }
+   50% { opacity: 1;  }
+   100% { opacity: 0; -webkit-transform: translate(0px,0px) rotate(0deg) ;  }
+}
+@-moz-keyframes animate-fade-in-down
+{
+   0% { opacity: 0; -moz-transform: translate(0px,-100px) rotate(0deg) ;  }
+   50% { opacity: 1;  }
+   100% { opacity: 0; -moz-transform: translate(0px,0px) rotate(0deg) ;  }
+}
+@keyframes animate-fade-in-down
+{
+   0% { opacity: 0; transform: translate(0px,-100px) rotate(0deg) ;  }
+   50% { opacity: 1;  }
+   100% { opacity: 0; transform: translate(0px,0px) rotate(0deg) ;  }
+}
+@-webkit-keyframes animate-opacity
+{
+   0% { opacity: 1;  }
+   50% { opacity: 0;  }
+   100% { opacity: 1;  }
+}
+@-moz-keyframes animate-opacity
+{
+   0% { opacity: 1;  }
+   50% { opacity: 0;  }
+   100% { opacity: 1;  }
+}
+@keyframes animate-opacity
+{
+   0% { opacity: 1;  }
+   50% { opacity: 0;  }
+   100% { opacity: 1;  }
+}
+a
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+a:visited
+{
+   color: #800080;
+}
+a:active
+{
+   color: #FF0000;
+}
+a:hover
+{
+   color: #0000FF;
+   text-decoration: underline;
+}
+input:focus, textarea:focus, select:focus
+{
+   outline: none;
+}
+.visibility-hidden
+{
+   visibility: hidden;
+}
+a.cculka-politika
+{
+   color: #3C3C3C;
+   text-decoration: none;
+   -webkit-transition: all 700ms ease;
+   -moz-transition: all 700ms ease;
+   transition: all 700ms ease;
+   position: relative;
+   display: inline-block;
+}
+a.cculka-politika::after
+{
+   background: transparent;
+   content: "";
+   display: block;
+   margin: auto;
+   height: 1px;
+   width: 0;
+   margin-top: 1px;
+   -webkit-transition: all 700ms ease;
+   -moz-transition: all 700ms ease;
+   transition: all 700ms ease;
+}
+a.cculka-politika:hover::after
+{
+   background: #3C3C3C;
+   width: 100%;
+}
+a.cculka-politika:visited
+{
+   color: #3C3C3C;
+   text-decoration: none;
+}
+a.cculka-politika:active
+{
+   color: #3C3C3C;
+   text-decoration: none;
+}
+a.cculka-politika:hover
+{
+   color: #3C3C3C;
+   text-decoration: none;
+}
+a.cculka-belaya
+{
+   color: #D0D0D0;
+   text-decoration: none;
+   -webkit-transition: all 700ms ease;
+   -moz-transition: all 700ms ease;
+   transition: all 700ms ease;
+   position: relative;
+   display: inline-block;
+}
+a.cculka-belaya::after
+{
+   background: transparent;
+   content: "";
+   display: block;
+   margin: auto;
+   height: 1px;
+   width: 0;
+   margin-top: 1px;
+   -webkit-transition: all 700ms ease;
+   -moz-transition: all 700ms ease;
+   transition: all 700ms ease;
+}
+a.cculka-belaya:hover::after
+{
+   background: #FFFFFF;
+   width: 100%;
+}
+a.cculka-belaya:visited
+{
+   color: #D0D0D0;
+   text-decoration: none;
+}
+a.cculka-belaya:active
+{
+   color: #D0D0D0;
+   text-decoration: none;
+}
+a.cculka-belaya:hover
+{
+   color: #FFFFFF;
+   text-decoration: none;
+}
+a.cculka-seraya
+{
+   color: #2D2D2D;
+   text-decoration: none;
+   -webkit-transition: all 700ms ease;
+   -moz-transition: all 700ms ease;
+   transition: all 700ms ease;
+   position: relative;
+   display: inline-block;
+}
+a.cculka-seraya::after
+{
+   background: transparent;
+   content: "";
+   display: block;
+   margin: auto;
+   height: 1px;
+   width: 0;
+   margin-top: 1px;
+   -webkit-transition: all 700ms ease;
+   -moz-transition: all 700ms ease;
+   transition: all 700ms ease;
+}
+a.cculka-seraya:hover::after
+{
+   background: #2D2D2D;
+   width: 100%;
+}
+a.cculka-seraya:visited
+{
+   color: #2D2D2D;
+   text-decoration: none;
+}
+a.cculka-seraya:active
+{
+   color: #2D2D2D;
+   text-decoration: none;
+}
+a.cculka-seraya:hover
+{
+   color: #2D2D2D;
+   text-decoration: none;
+}
+a.nomer-seruy
+{
+   color: #2D2D2D;
+   text-decoration: none;
+}
+a.nomer-seruy:visited
+{
+   color: #2D2D2D;
+   text-decoration: none;
+}
+a.nomer-seruy:active
+{
+   color: #2D2D2D;
+   text-decoration: none;
+}
+a.nomer-seruy:hover
+{
+   color: #2D2D2D;
+   text-decoration: none;
+}
+a.nomer-beluy
+{
+   color: #FFFFFF;
+   text-decoration: none;
+}
+a.nomer-beluy:visited
+{
+   color: #FFFFFF;
+   text-decoration: none;
+}
+a.nomer-beluy:active
+{
+   color: #FFFFFF;
+   text-decoration: none;
+}
+a.nomer-beluy:hover
+{
+   color: #FFFFFF;
+   text-decoration: none;
+}
+a.chitat-dalee
+{
+   color: #1F1F1F;
+   text-decoration: underline;
+}
+a.chitat-dalee:visited
+{
+   color: #1F1F1F;
+   text-decoration: underline;
+}
+a.chitat-dalee:active
+{
+   color: #1F1F1F;
+   text-decoration: underline;
+}
+a.chitat-dalee:hover
+{
+   color: #FCBD0C;
+   text-decoration: underline;
+}
+a.chitat-dalee_copy
+{
+   color: #FFFFFF;
+   text-decoration: underline;
+}
+a.chitat-dalee_copy:visited
+{
+   color: #FFFFFF;
+   text-decoration: underline;
+}
+a.chitat-dalee_copy:active
+{
+   color: #FFFFFF;
+   text-decoration: underline;
+}
+a.chitat-dalee_copy:hover
+{
+   color: #FCBD0C;
+   text-decoration: underline;
+}
+a.chitat-dalee_copy3232
+{
+   color: #1F1F1F;
+   text-decoration: underline;
+}
+a.chitat-dalee_copy3232:visited
+{
+   color: #1F1F1F;
+   text-decoration: underline;
+}
+a.chitat-dalee_copy3232:active
+{
+   color: #1F1F1F;
+   text-decoration: underline;
+}
+a.chitat-dalee_copy3232:hover
+{
+   color: #FD1B19;
+   text-decoration: underline;
+}
+a.zapros-spec
+{
+   color: #3C3C3C;
+   text-decoration: none;
+   -webkit-transition: all 500ms ease;
+   -moz-transition: all 500ms ease;
+   transition: all 500ms ease;
+}
+a.zapros-spec:visited
+{
+   color: #3C3C3C;
+   text-decoration: none;
+}
+a.zapros-spec:active
+{
+   color: #3C3C3C;
+   text-decoration: none;
+}
+a.zapros-spec:hover
+{
+   color: #3C3C3C;
+   text-decoration: underline;
+}
+a.zapros-prez
+{
+   color: #222222;
+   text-decoration: none;
+}
+a.zapros-prez:visited
+{
+   color: #222222;
+   text-decoration: none;
+}
+a.zapros-prez:active
+{
+   color: #222222;
+   text-decoration: none;
+}
+a.zapros-prez:hover
+{
+   color: #222222;
+   text-decoration: underline;
+}
+a.gazprom-sin
+{
+   color: #09ACEE;
+   font-weight: bold;
+   text-decoration: none;
+}
+a.gazprom-sin:visited
+{
+   color: #09ACEE;
+   font-weight: bold;
+   text-decoration: none;
+}
+a.gazprom-sin:active
+{
+   color: #09ACEE;
+   font-weight: bold;
+   text-decoration: none;
+}
+a.gazprom-sin:hover
+{
+   color: #FFFFFF;
+   font-weight: bold;
+   text-decoration: none;
+}
+a.gazprom-sin_copy
+{
+   color: #FFFFFF;
+   font-weight: bold;
+   text-decoration: none;
+}
+a.gazprom-sin_copy:visited
+{
+   color: #FFFFFF;
+   font-weight: bold;
+   text-decoration: none;
+}
+a.gazprom-sin_copy:active
+{
+   color: #FFFFFF;
+   font-weight: bold;
+   text-decoration: none;
+}
+a.gazprom-sin_copy:hover
+{
+   color: #FFFFFF;
+   font-weight: bold;
+   text-decoration: none;
+}
+a.gazprom-sin2
+{
+   color: #09ACEE;
+   font-weight: bold;
+   text-decoration: none;
+}
+a.gazprom-sin2:visited
+{
+   color: #09ACEE;
+   font-weight: bold;
+   text-decoration: none;
+}
+a.gazprom-sin2:active
+{
+   color: #09ACEE;
+   font-weight: bold;
+   text-decoration: none;
+}
+a.gazprom-sin2:hover
+{
+   color: #09ACEE;
+   font-weight: bold;
+   text-decoration: underline;
+}
+a.SHD
+{
+   color: #00396D;
+   text-decoration: none;
+}
+a.SHD:visited
+{
+   color: #00396D;
+   text-decoration: none;
+}
+a.SHD:active
+{
+   color: #00396D;
+   text-decoration: none;
+}
+a.SHD:hover
+{
+   color: #222222;
+   text-decoration: none;
+}
+a.SHD2
+{
+   color: #F4AF0B;
+   text-decoration: none;
+}
+a.SHD2:visited
+{
+   color: #F4AF0B;
+   text-decoration: none;
+}
+a.SHD2:active
+{
+   color: #F4AF0B;
+   text-decoration: none;
+}
+a.SHD2:hover
+{
+   color: #F4AF0B;
+   text-decoration: none;
+}
+a.PLATIYA-TEM
+{
+   color: #36434D;
+   text-decoration: none;
+}
+a.PLATIYA-TEM:visited
+{
+   color: #36434D;
+   text-decoration: none;
+}
+a.PLATIYA-TEM:active
+{
+   color: #36434D;
+   text-decoration: none;
+}
+a.PLATIYA-TEM:hover
+{
+   color: #36434D;
+   text-decoration: none;
+}
+a.PLATIYA-TEM-PORT
+{
+   color: #36434D;
+   text-decoration: none;
+}
+a.PLATIYA-TEM-PORT:visited
+{
+   color: #36434D;
+   text-decoration: none;
+}
+a.PLATIYA-TEM-PORT:active
+{
+   color: #36434D;
+   text-decoration: none;
+}
+a.PLATIYA-TEM-PORT:hover
+{
+   color: #EA418D;
+   text-decoration: underline;
+}
+a.massazh-line
+{
+   color: #222222;
+   text-decoration: none;
+}
+a.massazh-line:visited
+{
+   color: #222222;
+   text-decoration: none;
+}
+a.massazh-line:active
+{
+   color: #222222;
+   text-decoration: none;
+}
+a.massazh-line:hover
+{
+   color: #222222;
+   text-decoration: none;
+}
+a.massazh-pokaz
+{
+   color: #34A45B;
+   text-decoration: underline;
+}
+a.massazh-pokaz:visited
+{
+   color: #34A45B;
+   text-decoration: underline;
+}
+a.massazh-pokaz:active
+{
+   color: #34A45B;
+   text-decoration: underline;
+}
+a.massazh-pokaz:hover
+{
+   color: #34A45B;
+   text-decoration: underline;
+}
+a.massazh-line-2
+{
+   color: #FFFFFF;
+   text-decoration: none;
+}
+a.massazh-line-2:visited
+{
+   color: #FFFFFF;
+   text-decoration: none;
+}
+a.massazh-line-2:active
+{
+   color: #FFFFFF;
+   text-decoration: none;
+}
+a.massazh-line-2:hover
+{
+   color: #FFFFFF;
+   text-decoration: none;
+}
+a.madplus-st-svet
+{
+   color: #D0D0D0;
+   text-decoration: none;
+}
+a.madplus-st-svet:visited
+{
+   color: #D0D0D0;
+   text-decoration: none;
+}
+a.madplus-st-svet:active
+{
+   color: #D0D0D0;
+   text-decoration: none;
+}
+a.madplus-st-svet:hover
+{
+   color: #FFFFFF;
+   text-decoration: underline;
+}
+a.mad
+{
+   color: #5C5C5C;
+   text-decoration: none;
+}
+a.mad:visited
+{
+   color: #5C5C5C;
+   text-decoration: none;
+}
+a.mad:active
+{
+   color: #5C5C5C;
+   text-decoration: none;
+}
+a.mad:hover
+{
+   color: #2A93FE;
+   text-decoration: none;
+}
+a.mad_rab_bel
+{
+   color: #FFFFFF;
+   text-decoration: none;
+}
+a.mad_rab_bel:visited
+{
+   color: #FFFFFF;
+   text-decoration: none;
+}
+a.mad_rab_bel:active
+{
+   color: #FFFFFF;
+   text-decoration: none;
+}
+a.mad_rab_bel:hover
+{
+   color: #FFFFFF;
+   text-decoration: underline;
+}
+a.mad_rab_chern
+{
+   color: #222222;
+   text-decoration: none;
+   -webkit-transition: all 300ms linear;
+   -moz-transition: all 300ms linear;
+   transition: all 300ms linear;
+}
+a.mad_rab_chern:visited
+{
+   color: #222222;
+   text-decoration: none;
+}
+a.mad_rab_chern:active
+{
+   color: #222222;
+   text-decoration: none;
+}
+a.mad_rab_chern:hover
+{
+   color: #222222;
+   text-decoration: underline;
+}
+a.Turi-Bel
+{
+   color: #222222;
+   text-decoration: none;
+   -webkit-transition: all 300ms linear;
+   -moz-transition: all 300ms linear;
+   transition: all 300ms linear;
+   position: relative;
+   display: inline-block;
+}
+a.Turi-Bel::after
+{
+   background: transparent;
+   content: "";
+   display: block;
+   width: 0;
+   height: 1px;
+   margin-top: 1px;
+   -webkit-transition: all 300ms linear;
+   -moz-transition: all 300ms linear;
+   transition: all 300ms linear;
+}
+a.Turi-Bel:hover::after
+{
+   background: #222222;
+   width: 100%;
+}
+a.Turi-Bel:visited
+{
+   color: #222222;
+   text-decoration: none;
+}
+a.Turi-Bel:active
+{
+   color: #222222;
+   text-decoration: none;
+}
+a.Turi-Bel:hover
+{
+   color: #222222;
+   text-decoration: none;
+}
+a.katalog-text
+{
+   color: #121212;
+   text-decoration: none;
+}
+a.katalog-text:visited
+{
+   color: #121212;
+   text-decoration: none;
+}
+a.katalog-text:active
+{
+   color: #121212;
+   text-decoration: none;
+}
+a.katalog-text:hover
+{
+   color: #121212;
+   text-decoration: none;
+}
+a.katalog-text-karta
+{
+   color: #FFC000;
+   text-decoration: none;
+}
+a.katalog-text-karta:visited
+{
+   color: #FFC000;
+   text-decoration: none;
+}
+a.katalog-text-karta:active
+{
+   color: #FFC000;
+   text-decoration: none;
+}
+a.katalog-text-karta:hover
+{
+   color: #FFC000;
+   text-decoration: none;
+}
+a.pod
+{
+   color: #121212;
+   text-decoration: none;
+   -webkit-transition: all 300ms ease;
+   -moz-transition: all 300ms ease;
+   transition: all 300ms ease;
+   position: relative;
+   display: inline-block;
+}
+a.pod::after
+{
+   background: transparent;
+   content: "";
+   display: block;
+   margin: auto;
+   height: 2px;
+   width: 0;
+   margin-top: 2px;
+   -webkit-transition: all 300ms ease;
+   -moz-transition: all 300ms ease;
+   transition: all 300ms ease;
+}
+a.pod:hover::after
+{
+   background: #121212;
+   width: 100%;
+}
+a.pod:visited
+{
+   color: #121212;
+   text-decoration: none;
+}
+a.pod:active
+{
+   color: #121212;
+   text-decoration: none;
+}
+a.pod:hover
+{
+   color: #121212;
+   text-decoration: none;
+}
+a.madplus-st-svet_copy
+{
+   color: #808080;
+   text-decoration: none;
+}
+a.madplus-st-svet_copy:visited
+{
+   color: #808080;
+   text-decoration: none;
+}
+a.madplus-st-svet_copy:active
+{
+   color: #808080;
+   text-decoration: none;
+}
+a.madplus-st-svet_copy:hover
+{
+   color: #808080;
+   text-decoration: underline;
+}
+a.blago-st
+{
+   color: #131313;
+   text-decoration: none;
+}
+a.blago-st:visited
+{
+   color: #131313;
+   text-decoration: none;
+}
+a.blago-st:active
+{
+   color: #131313;
+   text-decoration: none;
+}
+a.blago-st:hover
+{
+   color: #131313;
+   text-decoration: none;
+}
+a.blago-st2
+{
+   color: #FFFFFF;
+   text-decoration: none;
+}
+a.blago-st2:visited
+{
+   color: #FFFFFF;
+   text-decoration: none;
+}
+a.blago-st2:active
+{
+   color: #FFFFFF;
+   text-decoration: none;
+}
+a.blago-st2:hover
+{
+   color: #FFFFFF;
+   text-decoration: none;
+}
+a.crm-ccilka
+{
+   color: #FFFFFF;
+   text-decoration: none;
+   -webkit-transition: all 500ms ease;
+   -moz-transition: all 500ms ease;
+   transition: all 500ms ease;
+   position: relative;
+   display: inline-block;
+}
+a.crm-ccilka::after
+{
+   background: transparent;
+   content: "";
+   display: block;
+   margin: auto;
+   height: 1px;
+   width: 0;
+   margin-top: 1px;
+   -webkit-transition: all 500ms ease;
+   -moz-transition: all 500ms ease;
+   transition: all 500ms ease;
+}
+a.crm-ccilka:hover::after
+{
+   background: #FFFFFF;
+   width: 100%;
+}
+a.crm-ccilka:visited
+{
+   color: #FFFFFF;
+   text-decoration: none;
+}
+a.crm-ccilka:active
+{
+   color: #FFFFFF;
+   text-decoration: none;
+}
+a.crm-ccilka:hover
+{
+   color: #FFFFFF;
+   text-decoration: none;
+}
+h1, .h1
+{
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 32px;
+   text-decoration: none;
+   color: #000000;
+   background-color: transparent;
+   margin: 0px 0px 0px 0px;
+   padding: 0px 0px 0px 0px;
+   display: inline;
+}
+h2, .h2
+{
+   font-family: Arial;
+   font-weight: bold;
+   font-size: 27px;
+   text-decoration: none;
+   color: #000000;
+   background-color: transparent;
+   margin: 0px 0px 0px 0px;
+   padding: 0px 0px 0px 0px;
+   display: inline;
+}
+h3, .h3
+{
+   font-family: Arial;
+   font-size: 24px;
+   text-decoration: none;
+   color: #000000;
+   background-color: transparent;
+   margin: 0px 0px 0px 0px;
+   padding: 0px 0px 0px 0px;
+   display: inline;
+}
+h4, .h4
+{
+   font-family: Arial;
+   font-size: 21px;
+   font-style: italic;
+   text-decoration: none;
+   color: #000000;
+   background-color: transparent;
+   margin: 0px 0px 0px 0px;
+   padding: 0px 0px 0px 0px;
+   display: inline;
+}
+h5, .h5
+{
+   font-family: Arial;
+   font-size: 19px;
+   text-decoration: none;
+   color: #000000;
+   background-color: transparent;
+   margin: 0px 0px 0px 0px;
+   padding: 0px 0px 0px 0px;
+   display: inline;
+}
+h6, .h6
+{
+   font-family: Arial;
+   font-size: 16px;
+   text-decoration: none;
+   color: #000000;
+   background-color: transparent;
+   margin: 0px 0px 0px 0px;
+   padding: 0px 0px 0px 0px;
+   display: inline;
+}
+.CustomStyle
+{
+   font-family: "Courier New";
+   font-weight: bold;
+   font-size: 16px;
+   text-decoration: none;
+   color: #000080;
+   background-color: transparent;
+}
+.CustomS
+{
+   font-weight: bold;
+   text-decoration: underline;
+   color: #FFFFFF;
+   background-color: transparent;
+}
